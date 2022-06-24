@@ -1,0 +1,5 @@
+.profile__form {
+  display: grid;
+  grid-template-areas:
+  "image info button";
+}

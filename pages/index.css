@@ -3,6 +3,19 @@
 
 @import url(../blocks/page/page.css);
 @import url(../blocks/page/__header/page__header.css);
+@import url(../blocks/content/content.css);
+@import url(../blocks/content/__profile/content__profile.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__image/header__image.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__image/profile__image.css);
+@import url(../blocks/profile/__form/profile__form.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__button-creat/profile__button-creat.css);
+@import url(../blocks/profile/__image-creat/button__image-creat.css);
+@import url(../blocks/profile/__title/profile__title.css);
+@import url(../blocks/profile/__subtitle/profile__subtitle.css);
+@import url(../blocks/profile/__button-add/profile__button-add.css);
+@import url(../blocks/profile/__image-add/button__image-add.css);
