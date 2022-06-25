@@ -1,0 +1,33 @@
+.element {
+  box-sizing: border-box;
+  display: flex;
+}
+.content__element {
+  margin: 50px 0 0;
+  padding: 0 200px;
+  width: 100%;
+}
+.element__cards-list {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  grid-template-rows: repeat(auto-fit, 282px);
+  gap: 20px 17px;
+  width: 100%;
+}
+.element__cards-item {
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+}
+.element__cards-img {
+
+}
+.element__cards-title {
+  margin: 0;
+}
+.element__cards-icon {
+}
