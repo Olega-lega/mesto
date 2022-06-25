@@ -5,4 +5,14 @@
   line-height: 22px;
   letter-spacing: 0em;
   margin: 0;
+  grid-area: subtitle;
 }
+
+@media screen and (max-width: 680px) {
+  .profile__subtitle {
+    font-size: 14px;
+    list-style: 17px;
+    text-align: center;
+    margin-top: 14px;
+  }
+  }

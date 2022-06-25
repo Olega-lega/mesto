@@ -5,5 +5,16 @@
   font-weight: 500;
   line-height: 48px;
   letter-spacing: 0em;
-  margin: 0 0 16px;
+  min-width: 294px;
+  margin: 0;
+  grid-area: title;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__title {
+    text-align: center;
+    font-size: 27px;
+    line-height: 33px;
+    min-width: 189px;
+  }
 }

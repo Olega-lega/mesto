@@ -8,5 +8,13 @@
   border: 1px solid #FFFFFF;
   background-color: #000;
   grid-area: button;
-  margin: 37px 0 0 18px;
+  margin-left: 18px;
+  }
+
+  @media screen and (max-width: 680px) {
+    .profile__button-creat {
+      width: 18px;
+      height: 18px;
+      margin:  0 0 0 10px;
+    }
   }

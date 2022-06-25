@@ -6,11 +6,4 @@
   flex-direction: column;
   margin: 0 auto;
   background-color: #000;
-  padding: 0 200px;
-}
-
-@media screen and (max-width: 568px) {
-  .page {
-    padding: 0 27px;
-  }
 }
