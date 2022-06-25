@@ -1,0 +1,12 @@
+.button__image-creat {
+  width: 10px;
+  height: 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 680px) {
+  .button__image-creat {
+    width: 7.5px;
+    height: 7.5px;
+  }
+}
