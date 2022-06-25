@@ -7,8 +7,7 @@
   height: 50px;
   border: 2px solid #FFFFFF;
   background-color: #000;
-  justify-self: end;
-  margin: auto;
+  margin-left: auto;
 }
 @media screen and (max-width: 1040px) {
   .profile__button-add {
