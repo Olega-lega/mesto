@@ -7,8 +7,14 @@
   height: 24px;
   border: 1px solid #FFFFFF;
   background-color: #000;
-  margin-left: 18px;
+  margin: 0 0 0 18px;
+  padding: 0;
+  transition: .6s;
   }
+
+ .profile__button-creat:hover {
+  opacity: .6;
+ }
 
   @media screen and (max-width: 680px) {
     .profile__button-creat {

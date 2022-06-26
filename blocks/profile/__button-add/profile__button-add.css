@@ -8,7 +8,8 @@
   border: 2px solid #FFFFFF;
   border-radius: 2px;
   background-color: #000;
-  margin-left: auto;
+  margin: 0 0 0 auto;
+  padding: 0;
   transition: opacity .5s;
 }
 

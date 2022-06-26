@@ -1,0 +1,19 @@
+.popup__input {
+  max-width: 358px;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  line-height: 26px;
+}
+
+.popup__input:first-of-type {
+  margin-bottom: 20px;
+}
+
+.popup__input::placeholder {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}

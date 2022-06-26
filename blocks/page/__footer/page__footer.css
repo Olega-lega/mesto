@@ -1,16 +1,17 @@
 .page__footer {
+  box-sizing: border-box;
   width: 100%;
-  padding: 0 200px 60px 0;
+  padding: 0 0 60px 200px;
 }
 
 @media screen and (max-width: 984px) {
   .page__footer {
-    padding: 0 100px 60px 0;
+    padding: 0 0 60px 100px;
   }
 }
 
 @media screen and (max-width: 568px) {
   .page__footer {
-    padding: 0 19px 36px 0;
+    padding: 0 0 36px 19px;
   }
 }
