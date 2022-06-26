@@ -10,4 +10,17 @@
   width: 32px;
   height: 32px;
   padding: 0;
+  transition: opacity .5s;
+}
+
+.popup__button-close:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__button-close {
+    width: 20px;
+    height: 20px;
+    top: 11px;
+  }
 }
