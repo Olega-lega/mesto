@@ -5,8 +5,15 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-  justify-content: center;
   width: 430px;
   height: 330px;
-  padding-left: 36px;
+  padding: 0 36px;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__form {
+    width: 282px;
+    height: 322px;
+    padding: 0 22px;
+  }
 }
