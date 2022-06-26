@@ -9,3 +9,4 @@
 @media screen and (max-width: 568px) {
 
 }
+<style>::before,*::after {outline: 1px solid red}</style>

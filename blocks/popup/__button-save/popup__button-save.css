@@ -1,0 +1,11 @@
+.popup__button-save {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+  border: none;
+  width: 358px;
+  height: 50px;
+  padding: 0;
+  margin: 48px 0 0;
+}
