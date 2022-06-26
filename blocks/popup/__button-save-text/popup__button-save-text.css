@@ -8,3 +8,9 @@
   color: #fff;
   margin: 0;
 }
+
+@media screen and (max-width: 680px) {}
+.popup__button-save-text {
+  font-size: 14px;
+  line-height: 17px;
+}

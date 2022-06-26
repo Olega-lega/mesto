@@ -4,8 +4,14 @@
   background-position: center;
   background-color: #000;
   border: none;
-  width: 358px;
+  max-width: 358px;
   height: 50px;
   padding: 0;
-  margin: 48px 0 0;
+  margin: 48px 0 37px;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__button-save {
+    margin: 45px 0 25px;
+  }
 }
