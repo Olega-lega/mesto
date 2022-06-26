@@ -1,0 +1,21 @@
+.element__button {
+  box-sizing: border-box;
+  background-image: url(../../../image/heart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  border: none;
+  width: 22px;
+  height: 19px;
+  margin-right: 30px;
+  transition: opacity .3s, background-image .5s;
+}
+
+.element__button:hover {
+  opacity: 0.5;
+}
+
+.element__button:active {
+  background-image: url(../../../image/black-heart.svg);
+  opacity: 1;
+}

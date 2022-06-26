@@ -1,23 +1,5 @@
 .profile__form {
-  display: grid;
-  grid-template-columns: repeat(3, min-content);
-  grid-template-rows: repeat(2, min-content);
-  grid-template-areas:
-  "image title button"
-  "image subtitle .";
+  display: flex;
+  flex-direction: column;
   color: #fff;
-  align-content: center;
-  align-items: center;
-}
-
-@media screen and (max-width: 680px) {
-  .profile__form {
-    grid-template-areas:
-    "image image"
-    "title button"
-    "subtitle .";
-    grid-template-columns: repeat(2, min-content);
-    grid-template-rows: repeat(2, min-content);
-    justify-items: center;
-  }
 }

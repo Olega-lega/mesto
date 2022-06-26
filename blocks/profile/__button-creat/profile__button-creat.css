@@ -1,13 +1,12 @@
 .profile__button-creat {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(../../../image/Pencel.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 24px;
   height: 24px;
   border: 1px solid #FFFFFF;
   background-color: #000;
-  grid-area: button;
   margin-left: 18px;
   }
 
