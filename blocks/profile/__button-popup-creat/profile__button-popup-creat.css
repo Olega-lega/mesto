@@ -1,4 +1,4 @@
-.profile__button-creat {
+.profile__button-popup-creat {
   box-sizing: border-box;
   background-image: url(../../../image/Pencel.svg);
   background-repeat: no-repeat;
@@ -12,12 +12,12 @@
   transition: .6s;
   }
 
- .profile__button-creat:hover {
+ .profile__button-popup-creat:hover {
   opacity: .6;
  }
 
   @media screen and (max-width: 680px) {
-    .profile__button-creat {
+    .profile__button-popup-creat {
       width: 18px;
       height: 18px;
       margin:  0 0 0 10px;

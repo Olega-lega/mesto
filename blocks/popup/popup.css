@@ -7,3 +7,7 @@
   height: 100%;
   display: none;
 }
+
+.popup_open {
+  display: flex;
+}
