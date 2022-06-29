@@ -1,17 +1,5 @@
 .content__profile {
-  margin: 0 auto;
-  padding: 0 200px;
+  box-sizing: border-box;
   width: 100%;
+  margin: 0 auto;
 }
-
-@media screen and (max-width: 984px) {
-  .content__profile {
-    padding: 0 100px;
-  }
-}
-
-  @media screen and (max-width: 680px) {
-    .content__profile {
-      padding: 0 19px;
-    }
-  }
