@@ -16,8 +16,3 @@
   opacity: 0.5;
   cursor: pointer;
 }
-
-.element__button:active {
-  background-image: url(../../../image/black-heart.svg);
-  opacity: 1;
-}

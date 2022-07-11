@@ -1,6 +1,6 @@
 .popup__container {
   box-sizing: border-box;
-  display: flex;
+  display: none;
   position: relative;
   align-items: flex-end;
   top: 17%;
