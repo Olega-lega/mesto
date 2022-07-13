@@ -35,19 +35,21 @@
     <p class="footer__text">&#169; 2022 Mesto Russia</p>
   </footer>
   
-  <div class="popup">
-    <div class="popup__container" id="popup__container-edit">
-      <button class="popup__button-close" id="close-edit" type="button"></button>
-    <form class="popup__form" id="form-edit" name="popup-profile">
+  <div class="popup popup_edit">
+    <div class="popup__container">
+      <button class="popup__button-close" type="button"></button>
+    <form class="popup__form popup__form_edit" name="popup-profile">
       <h2 class="popup__title">Редактировать профиль</h2>
       <input class="popup__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
       <input class="popup__input" type="text" name="activity" id="job" placeholder="Вид деятельности">
       <button class="popup__button-save" type="submit">Сохранить</button>
     </form>
     </div>
-    <div class="popup__container" id="popup__container-add">
-      <button class="popup__button-close" id="close-add" type="button"></button>
-    <form class="popup__form" id="form-add" name="popup-profile">
+    </div>
+  <div class="popup popup_add">
+    <div class="popup__container">
+      <button class="popup__button-close" type="button"></button>
+    <form class="popup__form popup__form_add" name="popup-profile">
       <h2 class="popup__title">Новое место</h2>
       <input class="popup__input" type="text" name="place-name" id="place-name" placeholder="Название">
       <input class="popup__input" type="text" name="source" id="img" placeholder="Ссылка на картинку">
@@ -55,15 +57,18 @@
     </form>
     </div>
   </div>
-  <div class="popup__img">
-    <img class="" src="" alt="">
-    <h2 class=""></h2>
+  <div class="popup popup_img">
+    <div class="popup__container-img">
+      <button class="popup__button-close" type="button"></button>
+      <img class="popup__object-picture" src="#" alt="#">
+      <h2 class="popup__img-title"></h2>
+    </div>
   </div>
   
   <template id="element-template">
     <li class="element__cards-item"> 
       <button class="element__button-delete" type="button"></button>
-      <img class="element__cards-img" src="" alt="">
+      <img class="element__cards-img" src="#" alt="#">
       <div class="element__cards-group">
       <h2 class="element__cards-title"></h2>
       <button class="element__button" type="button"></button>
