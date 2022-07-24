@@ -45,21 +45,33 @@ const elementCardsItem = elementTempalte.querySelector(selectors.item);
 function openPopup(popupElement) {
   popupElement.classList.add("popup_open");
   console.log("open popup clicked");
+  // слушатель добавления закрытия попав по нажатию 'Esc'
+  document.addEventListener('keydown', addListener);
 }
 // закрытие попапа
 function closePopup(popupElement) {
   popupElement.classList.remove("popup_open");
   console.log("close popup clicked");
+    // слушатель удаления закрытия попав по нажатию 'Esc'
+  document.removeEventListener('keydown', addListener);
 }
 // функция закрытия попапов
 popups.forEach((popup) => {
   popup.addEventListener("click", (evt) => {
-    if (evt.target.classList.contains("popup__button-close")) {
+    if (evt.target.classList.contains("popup__button-close") || (evt.target === evt.currentTarget)) {
       closePopup(popup);
     }
   });
   console.log("close popup clicked");
 });
+// фкнкция добавления закрытия попапов по нажатию 'Esc'
+function addListener(evt) {
+  if (evt.key === "Escape") {
+    popups.forEach((popup) => {
+      closePopup(popup)
+    })
+  }
+}
 // слушатель кнопки редактировать
 buttonEdit.addEventListener("click", () => {
   nameInput.value = profileTitle.textContent;
@@ -100,9 +112,7 @@ function creatCard(element) {
     evt.target.classList.toggle("element__buton_active");
   });
   // слушатель кнопки удаления
-  card
-    .querySelector(".element__button-delete")
-    .addEventListener("click", (evt) => {
+  card.querySelector(".element__button-delete").addEventListener("click", (evt) => {
       evt.target.closest(".element__cards-item").remove();
     });
   return card;
