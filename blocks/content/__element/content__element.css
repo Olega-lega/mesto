@@ -1,16 +1,4 @@
 .content__element {
-  padding: 0 200px;
+  box-sizing: border-box;
   width: 100%;
-}
-
-@media screen and (max-width: 984px) {
-  .content__element {
-    padding: 0 100px;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .content__element {
-    padding: 0 19px;
-  }
 }

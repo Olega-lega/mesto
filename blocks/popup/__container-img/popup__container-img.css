@@ -1,0 +1,24 @@
+.popup__container-img {
+  max-width: 75vh;
+  max-height: 75vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 730px) {
+  .popup__container-img {
+    width: 55vh;
+    max-height: 75vh;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .popup__container-img {
+    max-width: 240px;
+    height: 322px;
+  }
+}

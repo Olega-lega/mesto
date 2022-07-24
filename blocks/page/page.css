@@ -1,4 +1,5 @@
 .page {
+  box-sizing: border-box;
   min-width: 320px;
   max-width: 1280px;
   min-height: 100vh;
@@ -6,4 +7,23 @@
   flex-direction: column;
   margin: 0 auto;
   background-color: #000;
+  padding: 0 200px;
+}
+
+@media screen and (max-width: 1275px) {
+  .page {
+    padding: 0 160px;
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .page {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .page {
+    padding: 0;
+  }
 }
