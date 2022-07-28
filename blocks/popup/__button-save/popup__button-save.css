@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
-  border: none;
+  border-color: #000;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -15,7 +15,7 @@
   max-width: 358px;
   height: 50px;
   padding: 0;
-  margin: 44px 0 37px;
+  margin: 23px 0 37px;
   transition: opacity .5s;
 }
 
@@ -25,14 +25,9 @@
 }
 
 @media screen and (max-width: 680px) {
-  .popup__button-save {
-    margin: 45px 0 25px;
-  }
-}
-
-@media screen and (max-width: 680px) {
 .popup__button-save {
   font-size: 14px;
   line-height: 17px;
+  margin: 23px 0 25px;
 }
 }

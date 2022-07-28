@@ -7,6 +7,11 @@
    <link rel="stylesheet" href="./pages/index.css">
    <title>Mesto</title>
 </head>
+
+<script defer src="./scripts/card.js"></script>
+<script defer src="./scripts/index.js"></script>
+<script defer src="./scripts/validate.js"></script>
+
 <body class="page">
   <header class="header page__header">
     <img class="header__image" src="./image/logo.svg" alt="логотип Russia Mesto"> 
@@ -18,11 +23,11 @@
         <div class="profile__form">
          <div class="profile__from-info">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__button-edit" type="button"></button>
+          <button class="profile__button-edit" type="button" aria-label="button-edit"></button>
         </div>
           <p class="profile__subtitle">Исследователь океана</p>
       </div>
-      <button class="profile__button-add" type="button"></button>
+      <button class="profile__button-add" type="button" aria-label="button-add"></button>
     </section>
 
     <section class="element content__element">
@@ -37,12 +42,14 @@
   
   <div class="popup popup_edit">
     <div class="popup__container">
-      <button class="popup__button-close" type="button"></button>
+      <button class="popup__button-close" type="button" aria-label="button-close"></button>
     <form class="popup__form popup__form_edit" name="popup-profile" novalidate>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <input class="popup__input" type="text" name="name" id="name" minlength="2" maxlength="40" placeholder="Имя Фамилия">
-      <input class="popup__input" type="text" name="activity" id="job" minlength="2" maxlength="200" placeholder="Вид деятельности">
-      <button class="popup__button-save" type="submit">Сохранить</button>
+      <input class="popup__input popup__input-name" type="text" name="name" id="name-input" minlength="2" maxlength="40" placeholder="Имя Фамилия" required>
+      <span class="name-input-error popup__span-error"></span>
+      <input class="popup__input popup__input-activity" type="text" name="activity" id="job-input" minlength="2" maxlength="200" placeholder="Вид деятельности" required>
+      <span class="job-input-error popup__span-error"></span>
+      <button class="popup__button-save popup__button-save_disabled" type="submit" disabled>Сохранить</button>
     </form>
     </div>
     </div>
@@ -51,31 +58,31 @@
       <button class="popup__button-close" type="button"></button>
     <form class="popup__form popup__form_add" name="popup-profile" novalidate>
       <h2 class="popup__title">Новое место</h2>
-      <input class="popup__input" type="text" name="place-name" id="place-name" minlength="2" maxlength="30" placeholder="Название">
-      <input class="popup__input" type="url" name="source" id="img" placeholder="Ссылка на картинку">
-      <button class="popup__button-save" type="submit">Создать</button>
+      <input class="popup__input popup__input-place" type="text" name="place-name" id="place-input" minlength="2" maxlength="30" placeholder="Название" required>
+      <span class="place-input-error popup__span-error"></span>
+      <input class="popup__input popup__input-img" type="url" name="source" id="url-input" placeholder="Ссылка на картинку" required>
+      <span class="url-input-error popup__span-error"></span>
+      <button class="popup__button-save popup__button-add popup__button-save_disabled" type="submit" disabled>Создать</button>
     </form>
     </div>
   </div>
   <div class="popup popup_img">
     <div class="popup__container-img">
       <button class="popup__button-close" type="button"></button>
-      <img class="popup__object-picture" src="#" alt="#">
+      <img class="popup__object-picture" src="#" alt="">
       <h2 class="popup__img-title"></h2>
     </div>
   </div>
   
   <template id="element-template">
     <li class="element__cards-item"> 
-      <button class="element__button-delete" type="button"></button>
-      <img class="element__cards-img" src="#" alt="#">
+      <button class="element__button-delete" type="button" aria-label="button-delete"></button>
+      <img class="element__cards-img" src="#" alt="">
       <div class="element__cards-group">
       <h2 class="element__cards-title"></h2>
-      <button class="element__button" type="button"></button>
+      <button class="element__button" type="button" aria-label="button-like"></button>
     </div>
     </li>
   </template>
-  <script src="./scripts/card.js"></script>
-  <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -6,10 +6,8 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  margin-bottom: 5px;
   line-height: 35px;
   color: #000000;
-}
-
-.popup__input:first-of-type {
-  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, .0);
 }

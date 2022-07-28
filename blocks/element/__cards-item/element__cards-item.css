@@ -4,3 +4,8 @@
   flex-direction: column;
   position: relative;
 }
+
+.element__cards-item:hover {
+  cursor: pointer;
+  transform: scale(101%);
+}
