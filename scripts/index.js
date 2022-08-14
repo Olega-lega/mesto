@@ -16,9 +16,9 @@ const selectors = {
   imgPopup: ".popup__object-picture",
   profileTitle: ".profile__title",
   profileSubtitle: ".profile__subtitle",
-  list: ".element__cards-list",
-  elementTempalte: "#element-template",
-  item: ".element__cards-item",
+  // list: ".element__cards-list",
+  // elementTempalte: "#element-template",
+  // item: ".element__cards-item",
 };
 
 const popups = document.querySelectorAll(selectors.popup);
@@ -37,9 +37,9 @@ const imgOpen = popupImg.querySelector(selectors.imgOpen);
 const imgPopupTitle = popupImg.querySelector(selectors.imgTitle);
 const profileTitle = document.querySelector(selectors.profileTitle);
 const profileSubtitle = document.querySelector(selectors.profileSubtitle);
-const elementCardsList = document.querySelector(selectors.list);
-const elementTempalte = document.querySelector(selectors.elementTempalte).content;
-const elementCardsItem = elementTempalte.querySelector(selectors.item);
+// const elementCardsList = document.querySelector(selectors.list);
+// const elementTempalte = document.querySelector(selectors.elementTempalte).content;
+// const elementCardsItem = elementTempalte.querySelector(selectors.item);
 
 // oткрытиие попапа
 function openPopup(popupElement) {
@@ -94,6 +94,7 @@ buttonAdd.addEventListener("click", () => {
   openPopup(popupAdd);
 });
 // Создание шаблона
+<<<<<<< Updated upstream
 function creatCard(element) {
   const card = elementCardsItem.cloneNode(true);
   const name = card.querySelector(".element__cards-title");
@@ -101,6 +102,15 @@ function creatCard(element) {
   const img = card.querySelector(".element__cards-img");
   img.src = element.link;
   img.alt = element.link;
+=======
+// function creatCard(element) {
+//   const card = elementCardsItem.cloneNode(true);
+//   const name = card.querySelector(".element__cards-title");
+//   name.textContent = element.name;
+//   const img = card.querySelector(".element__cards-img");
+//   img.src = element.link;
+//   img.alt = element.name;
+>>>>>>> Stashed changes
   // слушатель открытия попап с картинкой
   img.addEventListener("click", function () {
     imgOpen.src = element.link;
