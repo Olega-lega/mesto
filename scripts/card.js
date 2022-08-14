@@ -49,6 +49,10 @@ class Card {
 
   return this._element;
   }
+// добавим слушатель
+  _setEventListeners() {}
+  _deleteCard() {}
+  _likeCard() {}
 }
 
 initialCards.forEach((item) => {
