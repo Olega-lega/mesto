@@ -24,11 +24,13 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ]
+
 class Card {
-  constructor(data, templateSelector) {
+  constructor(data, templateSelector, handleCardClick) {
       this._name = data.name;
       this._link = data.link;
       this._templateSelector = templateSelector;
+      this._handleCardClick =  handleCardClick;
   }
   // метдот создания шаблона
   _getTemplate() {
@@ -43,21 +45,33 @@ class Card {
 // добавим данные в разметку
   generateCard() {
   this._element = this._getTemplate();
+  this._image = this._element.querySelector(".element__cards-img")
+  this._setEventListners()
+
   this._element.querySelector(".element__cards-title").textContent = this._name;
-  this._element.querySelector(".element__cards-img").src = this._link;
-  this._element.querySelector(".element__cards-img").alt = this._name;
+  this._image.src = this._link;
+  this._image.alt = this._name;
 
   return this._element;
   }
-// добавим слушатель
-  _setEventListeners() {}
-  _deleteCard() {}
-  _likeCard() {}
+// добавим слушатель удаления карточки
+  _setEventListners() {
+    this._element.querySelector(".element__button-delete").addEventListener('click', () => {
+      this._deleteCard();
+    })
+    this._element.querySelector(".element__button").addEventListener("click", (evt) => {
+      this._likeCard(evt)
+    })
+    this._image.addEventListener("click", () => {
+      this._handleCardClick(this._name, this._link)
+    })
+  }
+  // метод удаления карточки
+  _deleteCard = () => {
+    this._element.remove()
+  }
+  // метод кнопки лайк
+  _likeCard = (evt) => {
+      evt.target.classList.toggle("element__buton_active")
+  }
 }
-
-initialCards.forEach((item) => {
-  const card = new Card(item, "#element-template");
-  const cardElement = card.generateCard();
-
-  document.querySelector(".element__cards-list").append(cardElement)
-})
