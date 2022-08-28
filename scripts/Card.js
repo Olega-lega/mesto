@@ -26,7 +26,7 @@ export const initialCards = [
 ];
 
 export class Card {
-  constructor(data, templateSelector, handleCardClick) {
+  constructor({data, handleCardClick}, templateSelector) {
     this._name = data.name;
     this._link = data.link;
     this._templateSelector = templateSelector;
