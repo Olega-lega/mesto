@@ -25,10 +25,10 @@ export class Popup {
   setEventListeners() {
     this._closeButton = this._popup.querySelector('.popup__button-close');
     this._popup.addEventListener('mousedown', this._handleOverlayClose);
-    this._closeButton.addEventListener('click', this.close);
+    this._closeButton.addEventListener('click', () => this.close());
   }
   _removeEventListeners() {
     this._popup.removeEventListener('mousedown', this._handleOverlayClose);
-    this._closeButton.removeEventListener('click', this.close);
+    this._closeButton.removeEventListener('click', () => this.close());
   }
 }
