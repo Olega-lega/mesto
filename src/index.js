@@ -1,3 +1,4 @@
+import '../pages/index.css'
 // Импорты классов
 import { Card, initialCards } from "./Card.js";
 import { FormValidator, configValidity } from "./FormValidator.js";
@@ -62,7 +63,8 @@ const popupAddForm = new PopupWithForm({
   const popupEddForm = new PopupWithForm ({
     popupSelector: popupEdit,
     handleFormSubmit: (data) => {
-      user.setUserInfo(data.name,
+      user.setUserInfo(
+        data.name,
          data.activity)
       popupEddForm.close()
     }
