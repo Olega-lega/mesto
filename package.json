@@ -7,7 +7,7 @@
     "build": "rm -rf dist && webpack",
     "build:dev": "webpack --mode=production",
     "dev": "webpack serve",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Olega-lega/mesto#readme",
   "devDependencies": {
-    "@babel/core": "^7.18.13",
+    "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.18.10",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
