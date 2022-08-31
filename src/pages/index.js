@@ -1,11 +1,11 @@
-import '../pages/index.css'
+import './index.css'
 // Импорты классов
-import { Card, initialCards } from "./Card.js";
-import { FormValidator, configValidity } from "./FormValidator.js";
-import { Section } from "./Section.js"
-import { PopupWithImage } from "./PopupWithImage.js"
-import { PopupWithForm } from "./PopupWithForm.js";
-import { UserInfo } from "./UserInfo.js";
+import { Card, initialCards } from "../components/Card.js";
+import { FormValidator, configValidity } from "../components/FormValidator.js";
+import { Section } from "../components/Section.js"
+import { PopupWithImage } from "../components/PopupWithImage.js"
+import { PopupWithForm } from "../components/PopupWithForm.js";
+import { UserInfo } from "../components/UserInfo.js";
 import { 
   popupEdit,
   buttonEdit,
@@ -16,7 +16,7 @@ import {
   formAdd,
   buttonAdd,
   popupImg,
-} from "./constants.js";
+} from "../utils/constants.js";
 
 // создание экземпляров классов
 // создание экземпляра класса валидации
