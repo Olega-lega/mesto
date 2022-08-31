@@ -1,11 +1,11 @@
-import '../pages/index.css'
+import './index.css'
 // Импорты классов
-import { Card, initialCards } from "./Card.js";
-import { FormValidator, configValidity } from "./FormValidator.js";
-import { Section } from "./Section.js"
-import { PopupWithImage } from "./PopupWithImage.js"
-import { PopupWithForm } from "./PopupWithForm.js";
-import { UserInfo } from "./UserInfo.js";
+import { Card } from "../components/Card.js";
+import { FormValidator } from "../components/FormValidator.js";
+import { Section } from "../components/Section.js"
+import { PopupWithImage } from "../components/PopupWithImage.js"
+import { PopupWithForm } from "../components/PopupWithForm.js";
+import { UserInfo } from "../components/UserInfo.js";
 import { 
   popupEdit,
   buttonEdit,
@@ -16,7 +16,11 @@ import {
   formAdd,
   buttonAdd,
   popupImg,
-} from "./constants.js";
+  profileTitle,
+  prifileSubtitle,
+  initialCards,
+  configValidity
+} from "../utils/constants.js";
 
 // создание экземпляров классов
 // создание экземпляра класса валидации
@@ -40,7 +44,7 @@ popUpWithImg.setEventListeners()
 
 // создание экземпляра класса попап формы
 const popupAddForm = new PopupWithForm({
-  popupSelector: popupAdd,
+  popupElement: popupAdd,
   handleFormSubmit: (data) => {
     cardList.setItem(creatCard({
       name: data.text,
@@ -50,26 +54,28 @@ const popupAddForm = new PopupWithForm({
 )
     )
     popupAddForm.close()
+    popupAddForm.removeEventListeners()
   }
 })
   popupAddForm.setEventListeners()
   // создание экземпляра класса пользователя
   const user = new UserInfo({
-    nameSelector: ".profile__title",
-    subSelector:".profile__subtitle"
+    nameSelector: profileTitle,
+    subSelector: prifileSubtitle
   })
 
   // создание экземпляра класса попап редактирования
-  const popupEddForm = new PopupWithForm ({
-    popupSelector: popupEdit,
+  const popupEditProfile = new PopupWithForm ({
+    popupElement: popupEdit,
     handleFormSubmit: (data) => {
       user.setUserInfo(
         data.name,
-         data.activity)
-      popupEddForm.close()
+         data.activity);
+      popupEditProfile.close();
+      popupEditProfile.removeEventListeners();
     }
   })
-  popupEddForm.setEventListeners()
+  popupEditProfile.setEventListeners()
 //функция создания карточки
 function creatCard(item) {
   const card = new Card({data: item, handleCardClick: (name, link) => {
@@ -92,6 +98,6 @@ buttonEdit.addEventListener("click", () => {
   nameInput.value = name;
   jobInput.value = activity;
   formCardCheckValid.resetValidation();
-  popupEddForm.open()
+  popupEditProfile.open()
 });
 

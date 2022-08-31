@@ -1,11 +1,3 @@
-export const configValidity = {
-  form: ".popup__form",
-  input: ".popup__input",
-  inputError: "popup__input_type_error",
-  button: ".popup__button-save",
-  buttonDisabled: "popup__button-save_disabled",
-};
-
 export class FormValidator {
   constructor(validationData, formSelector) {
     this._formSelector = formSelector;
