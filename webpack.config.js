@@ -11,6 +11,7 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
+    contentBase: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
     port: 8080
