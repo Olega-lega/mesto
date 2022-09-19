@@ -1,5 +1,6 @@
 import './index.css'
 // Импорты классов
+import {Api} from "../components/Api.js"
 import { Card } from "../components/Card.js";
 import { FormValidator } from "../components/FormValidator.js";
 import { Section } from "../components/Section.js"
@@ -36,8 +37,27 @@ const cardList = new Section ({
     cardList.setItem(creatCard(item))
   }
 }, ".element__cards-list");
-cardList.renderItems()
 
+ // Api
+ const api = new Api({
+  url:'https://mesto.nomoreparties.co/v1/cohort-50',
+  headers: {
+    authorization: "7f9ed849-91dd-461f-a1ba-4d8a8f634854",
+    'content-type': "application/json",
+  }
+})
+
+Promise.all([api.getInfo(), api.getInitialCards()])
+.then(([userData, cards]) => {
+  userId = userData._id
+  cardList.renderItems(cards)
+  user.setUserInfo(userData.name, userData.activity)
+})
+.catch((err) => {
+  console.log(`возникла ошибка: ${err.status}`)
+})
+
+let userId = null
 // создание экземлпяра класса попап картинки
 const popUpWithImg = new PopupWithImage(popupImg)
 popUpWithImg.setEventListeners()
@@ -58,6 +78,7 @@ const popupAddForm = new PopupWithForm({
   }
 })
   popupAddForm.setEventListeners()
+ 
   // создание экземпляра класса пользователя
   const user = new UserInfo({
     nameSelector: profileTitle,
