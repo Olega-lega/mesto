@@ -10,7 +10,12 @@ const selectors = {
   popupImg: ".popup_img",
   imgPopup: ".popup__object-picture",
   profileTitle: ".profile__title",
-  prifileSubtitle: ".profile__subtitle"
+  prifileSubtitle: ".profile__subtitle",
+  popupDelete: ".popup_delete",
+  popupAvatar: ".popup_avatar",
+  formAva: ".popup__form_avatar",
+  profileAvatar: ".profile__image",
+  profileButton: ".profile__pencel"
 };
 
 export const popupEdit = document.querySelector(selectors.popupEdit);
@@ -24,6 +29,11 @@ export const buttonAdd = document.querySelector(selectors.buttonAdd);
 export const popupImg = document.querySelector(selectors.popupImg);
 export const profileTitle = document.querySelector(selectors.profileTitle);
 export const prifileSubtitle = document.querySelector(selectors.prifileSubtitle);
+export const popupDelete = document.querySelector(selectors.popupDelete);
+export const popupAvatar = document.querySelector(selectors.popupAvatar)
+export const formAva = document.querySelector(selectors.formAva);
+export const profileAvatar = document.querySelector(selectors.profileAvatar)
+export const profileButton = document.querySelector(selectors.profileButton)
 
 export const initialCards = [
   {
@@ -59,3 +69,8 @@ export const configValidity = {
   button: ".popup__button-save",
   buttonDisabled: "popup__button-save_disabled",
 };
+
+export const apiConfig = {
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-50',
+  token: '7f9ed849-91dd-461f-a1ba-4d8a8f634854'
+}

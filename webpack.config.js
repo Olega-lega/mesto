@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require("path");
 
 module.exports = {
@@ -11,16 +12,17 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
+    static: { directory: path.resolve(__dirname, "./dist") },
     open: true,
     compress: true,
-    port: 8080
+    port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new MiniCssExtractPlugin()
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
@@ -37,7 +39,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff(2)?|eot|ttf|)$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name].[hash][ext]'

@@ -1,0 +1,61 @@
+.profile__pencel {
+  padding: 0;
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__pencel:hover {
+  cursor: pointer;
+}
+
+.profile__pencel::before {
+  background-color: rgba(0, 0, 0, 0.8);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+  z-index: 1;
+  background-position: center;
+}
+
+.profile__pencel::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  margin: auto;
+  height: 26px;
+  width: 26px;
+  background-image: url(../../../image/Pencel.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: .4s;
+  content: '';
+}
+
+.profile__pencel:hover::before {
+  opacity: .8;
+}
+
+.profile__pencel:hover::after {
+  z-index: 1;
+  opacity: 1;
+}

@@ -23,6 +23,13 @@ export class PopupWithForm extends Popup {
     e.preventDefault();
     this._handleFormSubmit(this._getInputValues());
   }
+  loading(isLoading) {
+    if (isLoading) {
+      this._buttonSubmit.textContent = 'Cохранение...'
+    } else {
+      this._buttonSubmit.textContent = 'Сохранить'
+    }
+  }
   setEventListeners(){
     super.setEventListeners();
     this._form.addEventListener('submit', this._submitForm);

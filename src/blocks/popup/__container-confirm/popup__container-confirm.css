@@ -1,9 +1,12 @@
 .popup__container-confirm {
-  min-height: 181px;
+  max-height: 190px;
+  width: 430px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 @media screen and (max-width: 568px) {
   .popup__container-confirm {
-    min-height: 181px;
+    height: 190px;
+    width: 272px;
   }
 }
