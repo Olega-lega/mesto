@@ -6,13 +6,15 @@ module.exports = {
   entry:'./src/pages/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'main.js',
+    publicPath: '',
   },
   mode: 'development',
   devServer: {
+    static: { directory: path.resolve(__dirname, "./dist") },
     open: true,
     compress: true,
-    port: 8080
+    port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -4,10 +4,10 @@
   "description": "Данный проект был сверстан адаптивным методом, так же использовалась форма для заполнения, и оформлялся PopUp с активными кнопками по выводу и закрытию, используя JavaScript. Секцию с картинками, верстал с помощью методова display: grid. Так же была реализованна возможность добавления шаблонных карточек методом Template. Используя метод checkValidity(), была осуществеленна валлидация форм всех полей ввода в модальных окнах. И добавленны альтернативные методы закрытия модальных окон, через: 'Esc' и 'overlay'. Так же был произведен рефакторинг кода по стандартам ООП",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack",
-    "build:dev": "webpack --mode=production",
+    "build": "rm -rf dist && webpack --mode=production",
     "dev": "webpack serve",
-    "deploy": "npm run build && gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.18.10",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.1",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.8",
+    "core-js": "^3.25.2",
     "cssnano": "^5.1.13"
   }
 }
