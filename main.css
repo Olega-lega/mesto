@@ -47,6 +47,8 @@
 .popup__input_type_error{border-bottom:1px solid red}
 .popup__span-error{color:red;display:block;font-size:12px;font-weight:400;height:14px;line-height:14px;margin-bottom:7px;max-width:358px}
 .popup__button-save_disabled{background-color:#fff;border-color:rgba(0,0,0,.2);color:rgba(0,0,0,.2)}
-.popup__container-confirm{min-height:181px}@media screen and (max-width:568px){.popup__container-confirm{min-height:181px}}
+.popup__container-confirm{background-color:transparent;max-height:190px;width:430px}@media screen and (max-width:568px){.popup__container-confirm{height:190px;width:272px}}
 .popup__container-avatar{min-height:272px}
+.popup__form_delete{height:181px;width:430px}@media screen and (max-width:568px){.popup__form_delete{height:190px;width:272px}}
+.popup__button-save_delete{margin:0}
 
